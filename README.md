@@ -23,5 +23,7 @@ Key features include:
 
 ---
 
-## 📂 Project Structure
+## 📂 Document Links
+[Final Report](https://docs.google.com/document/d/1dwaurbHzPVQcYql9VhDIC10omdElVdYjvM4fZ-zNziI/edit?usp=drive_link)
+[Presentation](https://docs.google.com/presentation/d/17Nf1NvzlN5sNUOu8Ogicwa4o2qFJa9s1CTXdhLQ9P84/edit?usp=drive_link)
 
