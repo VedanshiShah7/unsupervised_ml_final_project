@@ -1,0 +1,10 @@
+2025-04-08 23:32:01,583 - root - INFO - Log file is ../log/cifar10_test/log.txt.
+2025-04-08 23:32:01,583 - root - INFO - Data path is ../data.
+2025-04-08 23:32:01,583 - root - INFO - Export path is ../log/cifar10_test.
+2025-04-08 23:32:01,583 - root - INFO - Dataset: cifar10
+2025-04-08 23:32:01,583 - root - INFO - Normal class: 3
+2025-04-08 23:32:01,583 - root - INFO - Network: cifar10_LeNet
+2025-04-08 23:32:01,583 - root - INFO - Deep SVDD objective: one-class
+2025-04-08 23:32:01,583 - root - INFO - Nu-paramerter: 0.10
+2025-04-08 23:32:01,583 - root - INFO - Computation device: cpu
+2025-04-08 23:32:01,583 - root - INFO - Number of dataloader workers: 0

@@ -1,0 +1,15 @@
+# Ignore large datasets
+data/*.tar.gz
+data/cifar-10-python.tar.gz
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environment
+.env/
+.venv/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
