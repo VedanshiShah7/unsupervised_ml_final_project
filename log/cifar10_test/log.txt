@@ -48,3 +48,21 @@
 2025-04-08 23:40:31,036 - root - INFO - Starting pretraining...
 2025-04-08 23:40:39,233 - root - INFO -   Epoch 1/350	 Time: 8.196	 Loss: 91.99240356
 2025-04-08 23:40:47,226 - root - INFO -   Epoch 2/350	 Time: 7.992	 Loss: 19.78774918
+2025-04-08 23:40:55,654 - root - INFO -   Epoch 3/350	 Time: 8.428	 Loss: 11.69314533
+2025-04-08 23:41:04,529 - root - INFO -   Epoch 4/350	 Time: 8.875	 Loss: 9.76341450
+2025-04-08 23:41:13,288 - root - INFO -   Epoch 5/350	 Time: 8.759	 Loss: 8.72628361
+2025-04-08 23:41:22,517 - root - INFO -   Epoch 6/350	 Time: 9.228	 Loss: 8.01777340
+2025-04-08 23:41:31,452 - root - INFO -   Epoch 7/350	 Time: 8.935	 Loss: 7.48090225
+2025-04-08 23:41:40,401 - root - INFO -   Epoch 8/350	 Time: 8.949	 Loss: 7.07416683
+2025-04-08 23:41:49,260 - root - INFO -   Epoch 9/350	 Time: 8.859	 Loss: 6.72568785
+2025-04-08 23:41:58,334 - root - INFO -   Epoch 10/350	 Time: 9.073	 Loss: 6.44279171
+2025-04-08 23:42:07,247 - root - INFO -   Epoch 11/350	 Time: 8.913	 Loss: 6.21780857
+2025-04-08 23:42:16,096 - root - INFO -   Epoch 12/350	 Time: 8.849	 Loss: 6.02365240
+2025-04-08 23:42:25,604 - root - INFO -   Epoch 13/350	 Time: 9.507	 Loss: 5.83787027
+2025-04-08 23:42:34,987 - root - INFO -   Epoch 14/350	 Time: 9.383	 Loss: 5.68410791
+2025-04-08 23:42:44,400 - root - INFO -   Epoch 15/350	 Time: 9.414	 Loss: 5.53194033
+2025-04-08 23:42:53,742 - root - INFO -   Epoch 16/350	 Time: 9.342	 Loss: 5.40325632
+2025-04-08 23:43:02,897 - root - INFO -   Epoch 17/350	 Time: 9.154	 Loss: 5.29273329
+2025-04-08 23:43:12,391 - root - INFO -   Epoch 18/350	 Time: 9.494	 Loss: 5.19193190
+2025-04-08 23:43:22,727 - root - INFO -   Epoch 19/350	 Time: 10.336	 Loss: 5.11916504
+2025-04-08 23:43:33,290 - root - INFO -   Epoch 20/350	 Time: 10.563	 Loss: 5.03380632
