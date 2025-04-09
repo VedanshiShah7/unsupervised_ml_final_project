@@ -8,3 +8,43 @@
 2025-04-08 23:32:01,583 - root - INFO - Nu-paramerter: 0.10
 2025-04-08 23:32:01,583 - root - INFO - Computation device: cpu
 2025-04-08 23:32:01,583 - root - INFO - Number of dataloader workers: 0
+2025-04-08 23:38:54,688 - root - INFO - Log file is ../log/cifar10_test/log.txt.
+2025-04-08 23:38:54,688 - root - INFO - Data path is ../data.
+2025-04-08 23:38:54,688 - root - INFO - Export path is ../log/cifar10_test.
+2025-04-08 23:38:54,688 - root - INFO - Dataset: cifar10
+2025-04-08 23:38:54,688 - root - INFO - Normal class: 3
+2025-04-08 23:38:54,688 - root - INFO - Network: cifar10_LeNet
+2025-04-08 23:38:54,688 - root - INFO - Deep SVDD objective: one-class
+2025-04-08 23:38:54,688 - root - INFO - Nu-paramerter: 0.10
+2025-04-08 23:38:54,688 - root - INFO - Computation device: cpu
+2025-04-08 23:38:54,688 - root - INFO - Number of dataloader workers: 0
+2025-04-08 23:39:09,103 - root - INFO - Log file is ../log/cifar10_test/log.txt.
+2025-04-08 23:39:09,103 - root - INFO - Data path is ../data.
+2025-04-08 23:39:09,104 - root - INFO - Export path is ../log/cifar10_test.
+2025-04-08 23:39:09,104 - root - INFO - Dataset: cifar10
+2025-04-08 23:39:09,104 - root - INFO - Normal class: 3
+2025-04-08 23:39:09,104 - root - INFO - Network: cifar10_LeNet
+2025-04-08 23:39:09,104 - root - INFO - Deep SVDD objective: one-class
+2025-04-08 23:39:09,104 - root - INFO - Nu-paramerter: 0.10
+2025-04-08 23:39:09,104 - root - INFO - Computation device: cpu
+2025-04-08 23:39:09,104 - root - INFO - Number of dataloader workers: 0
+2025-04-08 23:40:29,636 - root - INFO - Log file is ../log/cifar10_test/log.txt.
+2025-04-08 23:40:29,636 - root - INFO - Data path is ../data.
+2025-04-08 23:40:29,636 - root - INFO - Export path is ../log/cifar10_test.
+2025-04-08 23:40:29,636 - root - INFO - Dataset: cifar10
+2025-04-08 23:40:29,636 - root - INFO - Normal class: 3
+2025-04-08 23:40:29,636 - root - INFO - Network: cifar10_LeNet
+2025-04-08 23:40:29,636 - root - INFO - Deep SVDD objective: one-class
+2025-04-08 23:40:29,636 - root - INFO - Nu-paramerter: 0.10
+2025-04-08 23:40:29,636 - root - INFO - Computation device: cpu
+2025-04-08 23:40:29,636 - root - INFO - Number of dataloader workers: 0
+2025-04-08 23:40:31,032 - root - INFO - Pretraining: True
+2025-04-08 23:40:31,032 - root - INFO - Pretraining optimizer: adam
+2025-04-08 23:40:31,032 - root - INFO - Pretraining learning rate: 0.0001
+2025-04-08 23:40:31,032 - root - INFO - Pretraining epochs: 350
+2025-04-08 23:40:31,032 - root - INFO - Pretraining learning rate scheduler milestones: (250,)
+2025-04-08 23:40:31,032 - root - INFO - Pretraining batch size: 200
+2025-04-08 23:40:31,032 - root - INFO - Pretraining weight decay: 5e-07
+2025-04-08 23:40:31,036 - root - INFO - Starting pretraining...
+2025-04-08 23:40:39,233 - root - INFO -   Epoch 1/350	 Time: 8.196	 Loss: 91.99240356
+2025-04-08 23:40:47,226 - root - INFO -   Epoch 2/350	 Time: 7.992	 Loss: 19.78774918
