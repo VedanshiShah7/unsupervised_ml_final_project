@@ -340,3 +340,26 @@
 2025-04-08 23:31:11,324 - root - INFO - Testing time: 0.893
 2025-04-08 23:31:11,328 - root - INFO - Test set AUC: 89.93%
 2025-04-08 23:31:11,329 - root - INFO - Finished testing.
+2025-04-16 15:45:20,605 - root - INFO - Log file is ../log/mnist_test/log.txt.
+2025-04-16 15:45:20,605 - root - INFO - Data path is ../data.
+2025-04-16 15:45:20,605 - root - INFO - Export path is ../log/mnist_test.
+2025-04-16 15:45:20,605 - root - INFO - Dataset: mnist
+2025-04-16 15:45:20,605 - root - INFO - Normal class: 3
+2025-04-16 15:45:20,605 - root - INFO - Network: mnist_LeNet
+2025-04-16 15:45:20,605 - root - INFO - Deep SVDD objective: one-class
+2025-04-16 15:45:20,605 - root - INFO - Nu-paramerter: 0.10
+2025-04-16 15:45:20,605 - root - INFO - Computation device: cpu
+2025-04-16 15:45:20,605 - root - INFO - Number of dataloader workers: 0
+2025-04-16 15:45:20,663 - root - INFO - Pretraining: True
+2025-04-16 15:45:20,663 - root - INFO - Pretraining optimizer: adam
+2025-04-16 15:45:20,663 - root - INFO - Pretraining learning rate: 0.0001
+2025-04-16 15:45:20,663 - root - INFO - Pretraining epochs: 150
+2025-04-16 15:45:20,663 - root - INFO - Pretraining learning rate scheduler milestones: (50,)
+2025-04-16 15:45:20,663 - root - INFO - Pretraining batch size: 200
+2025-04-16 15:45:20,663 - root - INFO - Pretraining weight decay: 0.0005
+2025-04-16 15:45:20,665 - root - INFO - Starting pretraining...
+2025-04-16 15:45:22,466 - root - INFO -   Epoch 1/150	 Time: 1.799	 Loss: 76.82396686
+2025-04-16 15:45:24,249 - root - INFO -   Epoch 2/150	 Time: 1.783	 Loss: 49.25086015
+2025-04-16 15:45:26,071 - root - INFO -   Epoch 3/150	 Time: 1.822	 Loss: 34.20631279
+2025-04-16 15:45:28,231 - root - INFO -   Epoch 4/150	 Time: 2.160	 Loss: 24.97007179
+2025-04-16 15:45:30,814 - root - INFO -   Epoch 5/150	 Time: 2.582	 Loss: 18.84318758
