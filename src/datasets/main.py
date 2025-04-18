@@ -1,19 +1,24 @@
-from .mnist import MNIST_Dataset
-from .cifar10 import CIFAR10_Dataset
+from datasets.__local__ import implemented_datasets
+from datasets.mnist import MNIST_DataLoader
+from datasets.cifar10 import CIFAR_10_DataLoader
+from datasets.GTSRB import GTSRB_DataLoader
 
 
-def load_dataset(dataset_name, data_path, normal_class):
-    """Loads the dataset."""
+def load_dataset(learner, dataset_name, pretrain=False):
 
-    implemented_datasets = ('mnist', 'cifar10')
     assert dataset_name in implemented_datasets
 
-    dataset = None
+    if dataset_name == "mnist":
+        data_loader = MNIST_DataLoader
 
-    if dataset_name == 'mnist':
-        dataset = MNIST_Dataset(root=data_path, normal_class=normal_class)
+    if dataset_name == "cifar10":
+        data_loader = CIFAR_10_DataLoader
 
-    if dataset_name == 'cifar10':
-        dataset = CIFAR10_Dataset(root=data_path, normal_class=normal_class)
+    if dataset_name == "gtsrb":
+        data_loader = GTSRB_DataLoader
 
-    return dataset
+    # load data with data loader
+    learner.load_data(data_loader=data_loader, pretrain=pretrain)
+
+    # check all parameters have been attributed
+    learner.data.check_all()
