@@ -3,144 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deep One-Class Classification</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>One-Class AUC Visualizer</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f8fc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      padding: 2rem;
       color: #333;
     }
-    header {
-      background: #10182f;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
+    h1 {
+      margin-bottom: 1rem;
     }
-    main {
-      max-width: 1000px;
+    .container {
+      max-width: 900px;
       margin: auto;
+      background: white;
+      border-radius: 8px;
       padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    section {
-      margin-bottom: 2.5rem;
+    .section {
+      margin-bottom: 1.5rem;
     }
-    h1, h2 {
-      color: #10182f;
+    .score-box {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: #0077cc;
+      font-weight: bold;
     }
-    a {
-      color: #4f46e5;
-      text-decoration: none;
+    label {
+      display: block;
+      margin: 0.5rem 0;
     }
-    code {
-      background: #eee;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #10182f;
+    button {
+      background: #0077cc;
       color: white;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background: #005fa3;
     }
     canvas {
-      max-width: 100%;
-      margin-top: 1rem;
-    }
-    button, select {
-      background: #4f46e5;
-      color: white;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-right: 1rem;
-    }
-    button:hover, select:hover {
-      background: #3730a3;
-    }
-    select {
-      padding: 0.5rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Deep One-Class Classification</h1>
-    <p>Final Project - Unsupervised ML (Spring 2025)</p>
-  </header>
-  <main>
-    <section>
-      <h2>📈 AUC Comparison</h2>
-      <label for="datasetSelect">Choose Dataset:</label>
-      <select id="datasetSelect" onchange="updateChart()">
-        <option value="mnist">MNIST</option>
-        <option value="cifar">CIFAR-10</option>
-        <option value="fmnist">Fashion-MNIST</option>
+  <div class="container">
+    <h1>Deep One-Class AUC Visualizer</h1>
+
+    <div class="section">
+      <label for="dataset">Choose Dataset:</label>
+      <select id="dataset" multiple size="10">
+        <option value="mnist_0">MNIST - Class 0</option>
+        <option value="mnist_1">MNIST - Class 1</option>
+        <option value="mnist_2">MNIST - Class 2</option>
+        <option value="mnist_3">MNIST - Class 3</option>
+        <option value="mnist_4">MNIST - Class 4</option>
+        <option value="mnist_5">MNIST - Class 5</option>
+        <option value="mnist_6">MNIST - Class 6</option>
+        <option value="mnist_7">MNIST - Class 7</option>
+        <option value="mnist_8">MNIST - Class 8</option>
+        <option value="mnist_9">MNIST - Class 9</option>
+        <option value="cifar">CIFAR-10 - Class: Airplane</option>
       </select>
-      <canvas id="aucChart" width="800" height="400"></canvas>
-    </section>
-    <section>
-      <h2>📊 Try It Out</h2>
-      <p>Click below to simulate an anomaly detection prediction (mock).</p>
-      <button onclick="simulateModel()">Run Model</button>
-      <p id="resultText" style="font-weight: bold; margin-top: 1rem;"></p>
-    </section>
-    <section>
-      <h2>🛠️ GitHub & Dataset</h2>
-      <p>Check out the full implementation on <a href="https://github.com/VedanshiShah7/unsupervised_ml_final_project" target="_blank">GitHub</a>.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Vedanshi Shah, Abbie Murphy, Jimmy Kong | Unsupervised ML Final Project</p>
-  </footer>
+    </div>
+
+    <div class="section">
+      <strong>Preprocessing Layers:</strong><br />
+      <label><input type="checkbox" value="batchnorm" /> BatchNorm</label>
+      <label><input type="checkbox" value="dropout" /> Dropout</label>
+      <label><input type="checkbox" value="whitening" /> ZCA Whitening</label>
+    </div>
+
+    <div class="section">
+      <strong>Midprocessing Layers:</strong><br />
+      <label><input type="checkbox" value="attention" /> Attention Block</label>
+      <label><input type="checkbox" value="residual" /> Residual Skip</label>
+    </div>
+
+    <div class="section">
+      <strong>Postprocessing Layers:</strong><br />
+      <label><input type="checkbox" value="layernorm" /> LayerNorm</label>
+      <label><input type="checkbox" value="dense" /> Dense Projection</label>
+    </div>
+
+    <button onclick="simulateAUC()">Run Simulation</button>
+    <div class="score-box" id="auc-score"></div>
+    <canvas id="aucChart" width="800" height="400"></canvas>
+  </div>
 
   <script>
-    const ctx = document.getElementById('aucChart').getContext('2d');
-
-    let chart;
-
-    const datasets = {
-      mnist: [0.89, 0.91, 0.88],
-      cifar: [0.72, 0.75, 0.71],
-      fmnist: [0.84, 0.86, 0.83]
+    const benchmarks = {
+      mnist_0: 0.983,
+      mnist_1: 0.986,
+      mnist_2: 0.961,
+      mnist_3: 0.954,
+      mnist_4: 0.962,
+      mnist_5: 0.949,
+      mnist_6: 0.971,
+      mnist_7: 0.978,
+      mnist_8: 0.945,
+      mnist_9: 0.963,
+      cifar: 0.859
     };
 
-    function updateChart() {
-      const selected = document.getElementById('datasetSelect').value;
-      const data = datasets[selected];
-      chart.data.datasets[0].data = data;
-      chart.update();
+    function simulateAUC() {
+      const selectedOptions = [...document.getElementById('dataset').selectedOptions].map(opt => opt.value);
+      const checked = [...document.querySelectorAll('input[type=checkbox]:checked')].map(cb => cb.value);
+
+      const aucData = selectedOptions.map(dataset => {
+        let baseAUC = benchmarks[dataset];
+        let auc = baseAUC;
+
+        if (checked.includes('batchnorm')) auc += 0.005;
+        if (checked.includes('dropout')) auc += 0.002;
+        if (checked.includes('whitening')) auc += 0.003;
+        if (checked.includes('attention')) auc += 0.008;
+        if (checked.includes('residual')) auc += 0.007;
+        if (checked.includes('layernorm')) auc += 0.004;
+        if (checked.includes('dense')) auc += 0.003;
+
+        auc = Math.min(auc, 0.996);
+        return { dataset, auc, benchmark: baseAUC };
+      });
+
+      const summaryText = aucData.map(item => `${item.dataset.toUpperCase()}: ${item.auc.toFixed(4)} (Benchmark: ${item.benchmark})`).join('<br>');
+      document.getElementById('auc-score').innerHTML = summaryText;
+
+      renderChart(aucData);
     }
 
-    chart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Baseline AE+OC-SVM', 'Ours: AE+KMeans++', 'Ours: AE+DBSCAN'],
-        datasets: [{
-          label: 'AUC Score',
-          data: datasets['mnist'],
-          backgroundColor: ['#4f46e5', '#16a34a', '#f59e0b']
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 1
+    function renderChart(data) {
+      const ctx = document.getElementById('aucChart').getContext('2d');
+      if (window.aucChart) window.aucChart.destroy();
+
+      window.aucChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: data.map(d => d.dataset.toUpperCase()),
+          datasets: [
+            {
+              label: 'Benchmark AUC',
+              backgroundColor: '#999',
+              data: data.map(d => d.benchmark)
+            },
+            {
+              label: 'Simulated AUC',
+              backgroundColor: '#0077cc',
+              data: data.map(d => d.auc)
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: false,
+              min: 0.8,
+              max: 1.0
+            }
           }
         }
-      }
-    });
-
-    function simulateModel() {
-      const outcomes = ['Anomaly Detected 🚨', 'Normal Sample ✅'];
-      const randomResult = outcomes[Math.floor(Math.random() * outcomes.length)];
-      document.getElementById('resultText').innerText = `Prediction: ${randomResult}`;
+      });
     }
   </script>
 </body>
