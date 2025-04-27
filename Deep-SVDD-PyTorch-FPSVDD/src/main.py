@@ -170,13 +170,17 @@ def main(dataset_name, net_name, xp_path, data_path, load_config, load_model, ob
     # Test model
     deep_SVDD.test(dataset, device=device, n_jobs_dataloader=n_jobs_dataloader)
 
-    # Plot most anomalous and most normal (within-class) test samples
+    # Normalize anomaly scores (postprocessing)
     indices, labels, scores = zip(*deep_SVDD.results['test_scores'])
-    indices, labels, scores = np.array(indices), np.array(labels), np.array(scores)
-    idx_sorted = indices[labels == 0][np.argsort(scores[labels == 0])]  # sorted from lowest to highest anomaly score
+    scores = np.array(scores)
+    scores = (scores - scores.mean()) / scores.std()  # z-score normalization
+    # Update results with normalized scores if needed
+    deep_SVDD.results['test_scores'] = list(zip(indices, labels, scores))
+
+    # Sort indices by anomaly score (ascending: most normal first)
+    idx_sorted = np.argsort(scores)
 
     if dataset_name in ('mnist', 'cifar10'):
-
         if dataset_name == 'mnist':
             X_normals = dataset.test_set.test_data[idx_sorted[:32], ...].unsqueeze(1)
             X_outliers = dataset.test_set.test_data[idx_sorted[-32:], ...].unsqueeze(1)
