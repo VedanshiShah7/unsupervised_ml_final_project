@@ -20,6 +20,7 @@ Key features include:
 - AUC comparison charts for three datasets: MNIST, CIFAR-10, and Fashion-MNIST.
 - Simulated anomaly detection predictions.
 - Interactive visualization using Chart.js.
+- AUC based visualizations.
 
 ---
 ## 🔬 Experiments on Original Code
