@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One-Class AUC Visualizer</title>
+  <title>Deep One-Class AUC Visualizer</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
@@ -12,11 +12,11 @@
       padding: 2rem;
       color: #333;
     }
-    h1 {
-      margin-bottom: 1rem;
+    h1, h2 {
+      text-align: center;
     }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       background: white;
       border-radius: 8px;
@@ -51,12 +51,28 @@
     canvas {
       margin-top: 2rem;
     }
+    .plot {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .plot img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .plot-title {
+      margin: 1rem 0 0.5rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Deep One-Class AUC Visualizer</h1>
 
+    <!-- Simulation UI Section -->
     <div class="section">
       <label for="dataset">Choose Dataset:</label>
       <select id="dataset" multiple size="10">
@@ -96,8 +112,62 @@
     <button onclick="simulateAUC()">Run Simulation</button>
     <div class="score-box" id="auc-score"></div>
     <canvas id="aucChart" width="800" height="400"></canvas>
+
+    <!-- Python-Generated Plot Gallery -->
+    <h2>Python-Generated AUC Visualizations</h2>
+
+    <div class="plot">
+      <div class="plot-title">1. Benchmark vs Simulated AUC (Bar Plot)</div>
+      <img src="static/plots/plot1_barchart.png" alt="Plot 1">
+    </div>
+
+    <div class="plot">
+      <div class="plot-title">2. Heatmap of Simulated AUC</div>
+      <img src="static/plots/plot2_heatmap.png" alt="Plot 2">
+    </div>
+
+    <div class="plot">
+      <div class="plot-title">3. Histogram of Simulated AUC</div>
+      <img src="static/plots/plot3_histogram.png" alt="Plot 3">
+    </div>
+
+    <div class="plot">
+      <div class="plot-title">4. Violin Plot of AUC by Layer</div>
+      <img src="static/plots/plot4_violin.png" alt="Plot 4">
+    </div>
+
+    <div class="plot">
+      <div class="plot-title">5. Line Plot of Simulated AUC</div>
+      <img src="static/plots/plot5_lineplot.png" alt="Plot 5">
+    </div>
+
+    <div class="plot">
+      <div class="plot-title">6. 3D Scatter Plot</div>
+      <img src="static/plots/plot6_3dscatter.png" alt="Plot 6">
+    </div>
+
+    <div class="plot">
+      <div class="plot-title">7. Boxplot of Simulated AUC</div>
+      <img src="static/plots/plot7_boxplot.png" alt="Plot 7">
+    </div>
+
+    <div class="plot">
+      <div class="plot-title">8. Radar Plot of Top Simulated AUCs</div>
+      <img src="static/plots/plot8_radar.png" alt="Plot 8">
+    </div>
+
+    <div class="plot">
+      <div class="plot-title">9. Pairplot of Layers vs AUC</div>
+      <img src="static/plots/plot9_pairplot.png" alt="Plot 9">
+    </div>
+
+    <div class="plot">
+      <div class="plot-title">10. KDE Jointplot</div>
+      <img src="static/plots/plot10_jointplot.png" alt="Plot 10">
+    </div>
   </div>
 
+  <!-- Simulation Logic -->
   <script>
     const benchmarks = {
       mnist_0: 0.983,
@@ -117,6 +187,11 @@
       const selectedOptions = [...document.getElementById('dataset').selectedOptions].map(opt => opt.value);
       const checked = [...document.querySelectorAll('input[type=checkbox]:checked')].map(cb => cb.value);
 
+      if (selectedOptions.length === 0) {
+        alert("Please select at least one dataset.");
+        return;
+      }
+
       const aucData = selectedOptions.map(dataset => {
         let baseAUC = benchmarks[dataset];
         let auc = baseAUC;
@@ -133,15 +208,25 @@
         return { dataset, auc, benchmark: baseAUC };
       });
 
-      const summaryText = aucData.map(item => `${item.dataset.toUpperCase()}: ${item.auc.toFixed(4)} (Benchmark: ${item.benchmark})`).join('<br>');
+      console.log("Chart data:", aucData);
+
+      const summaryText = aucData.map(item =>
+        `${item.dataset.toUpperCase()}: ${item.auc.toFixed(4)} (Benchmark: ${item.benchmark})`
+      ).join('<br>');
+
       document.getElementById('auc-score').innerHTML = summaryText;
 
       renderChart(aucData);
     }
 
+
     function renderChart(data) {
       const ctx = document.getElementById('aucChart').getContext('2d');
-      if (window.aucChart) window.aucChart.destroy();
+
+      // Prevent error on first run
+      if (window.aucChart instanceof Chart) {
+        window.aucChart.destroy();
+      }
 
       window.aucChart = new Chart(ctx, {
         type: 'bar',
@@ -163,16 +248,10 @@
         options: {
           responsive: true,
           plugins: {
-            legend: {
-              position: 'top'
-            }
+            legend: { position: 'top' }
           },
           scales: {
-            y: {
-              beginAtZero: false,
-              min: 0.8,
-              max: 1.0
-            }
+            y: { beginAtZero: false, min: 0.8, max: 1.0 }
           }
         }
       });
