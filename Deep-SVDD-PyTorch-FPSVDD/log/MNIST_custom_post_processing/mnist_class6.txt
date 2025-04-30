@@ -1,0 +1,368 @@
+INFO:root:Log file is ../log/mnist_test/log.txt.
+INFO:root:Data path is ../data.
+INFO:root:Export path is ../log/mnist_test.
+INFO:root:Dataset: mnist
+INFO:root:Normal class: 6
+INFO:root:Network: mnist_LeNet
+INFO:root:Deep SVDD objective: one-class
+INFO:root:Nu-paramerter: 0.10
+INFO:root:Computation device: cuda
+INFO:root:Number of dataloader workers: 0
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torchvision/datasets/mnist.py:65: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+INFO:root:Pretraining: True
+INFO:root:Pretraining optimizer: adam
+INFO:root:Pretraining learning rate: 0.0001
+INFO:root:Pretraining epochs: 150
+INFO:root:Pretraining learning rate scheduler milestones: (50,)
+INFO:root:Pretraining batch size: 200
+INFO:root:Pretraining weight decay: 0.0005
+INFO:root:Starting pretraining...
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:227: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torchvision/datasets/mnist.py:75: UserWarning: train_data has been renamed data
+  warnings.warn("train_data has been renamed data")
+INFO:root:  Epoch 1/150  Time: 1.578     Loss: 224.65176442
+INFO:root:  Epoch 2/150  Time: 1.227     Loss: 176.18733266
+INFO:root:  Epoch 3/150  Time: 1.225     Loss: 139.07685750
+INFO:root:  Epoch 4/150  Time: 1.234     Loss: 110.02690252
+INFO:root:  Epoch 5/150  Time: 1.272     Loss: 86.37177022
+INFO:root:  Epoch 6/150  Time: 1.374     Loss: 68.87176221
+INFO:root:  Epoch 7/150  Time: 1.442     Loss: 55.82155507
+INFO:root:  Epoch 8/150  Time: 1.295     Loss: 45.89311943
+INFO:root:  Epoch 9/150  Time: 1.315     Loss: 38.44644457
+INFO:root:  Epoch 10/150         Time: 1.320     Loss: 32.80835164
+INFO:root:  Epoch 11/150         Time: 1.252     Loss: 28.42178434
+INFO:root:  Epoch 12/150         Time: 1.312     Loss: 24.93750712
+INFO:root:  Epoch 13/150         Time: 1.325     Loss: 22.13158073
+INFO:root:  Epoch 14/150         Time: 1.266     Loss: 19.88684228
+INFO:root:  Epoch 15/150         Time: 1.266     Loss: 18.08025188
+INFO:root:  Epoch 16/150         Time: 1.346     Loss: 16.60996005
+INFO:root:  Epoch 17/150         Time: 1.341     Loss: 15.39173838
+INFO:root:  Epoch 18/150         Time: 1.285     Loss: 14.38265867
+INFO:root:  Epoch 19/150         Time: 1.278     Loss: 13.53576005
+INFO:root:  Epoch 20/150         Time: 1.254     Loss: 12.80618556
+INFO:root:  Epoch 21/150         Time: 1.303     Loss: 12.17438669
+INFO:root:  Epoch 22/150         Time: 1.331     Loss: 11.63652318
+INFO:root:  Epoch 23/150         Time: 1.245     Loss: 11.15898765
+INFO:root:  Epoch 24/150         Time: 1.272     Loss: 10.74740699
+INFO:root:  Epoch 25/150         Time: 1.353     Loss: 10.38100135
+INFO:root:  Epoch 26/150         Time: 1.278     Loss: 10.05408869
+INFO:root:  Epoch 27/150         Time: 1.303     Loss: 9.76610266
+INFO:root:  Epoch 28/150         Time: 1.263     Loss: 9.50234731
+INFO:root:  Epoch 29/150         Time: 1.273     Loss: 9.26986481
+INFO:root:  Epoch 30/150         Time: 1.334     Loss: 9.04592628
+INFO:root:  Epoch 31/150         Time: 1.310     Loss: 8.85970214
+INFO:root:  Epoch 32/150         Time: 1.355     Loss: 8.67330691
+INFO:root:  Epoch 33/150         Time: 1.252     Loss: 8.50710189
+INFO:root:  Epoch 34/150         Time: 1.268     Loss: 8.34858104
+INFO:root:  Epoch 35/150         Time: 1.273     Loss: 8.20529825
+INFO:root:  Epoch 36/150         Time: 1.355     Loss: 8.07051002
+INFO:root:  Epoch 37/150         Time: 1.275     Loss: 7.94183008
+INFO:root:  Epoch 38/150         Time: 1.285     Loss: 7.82416635
+INFO:root:  Epoch 39/150         Time: 1.285     Loss: 7.71754737
+INFO:root:  Epoch 40/150         Time: 1.296     Loss: 7.60970610
+INFO:root:  Epoch 41/150         Time: 1.240     Loss: 7.51029795
+INFO:root:  Epoch 42/150         Time: 1.320     Loss: 7.41068765
+INFO:root:  Epoch 43/150         Time: 1.292     Loss: 7.32366029
+INFO:root:  Epoch 44/150         Time: 1.310     Loss: 7.23362246
+INFO:root:  Epoch 45/150         Time: 1.255     Loss: 7.14572023
+INFO:root:  Epoch 46/150         Time: 1.283     Loss: 7.06718451
+INFO:root:  Epoch 47/150         Time: 1.303     Loss: 6.98792885
+INFO:root:  Epoch 48/150         Time: 1.285     Loss: 6.90174629
+INFO:root:  Epoch 49/150         Time: 1.240     Loss: 6.82781682
+INFO:root:  Epoch 50/150         Time: 1.352     Loss: 6.78691812
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:597: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  _warn_get_lr_called_within_step(self)
+INFO:root:  LR scheduler: new learning rate is 1e-05
+INFO:root:  Epoch 51/150         Time: 1.345     Loss: 6.77682430
+INFO:root:  Epoch 52/150         Time: 1.295     Loss: 6.76888197
+INFO:root:  Epoch 53/150         Time: 1.236     Loss: 6.75921036
+INFO:root:  Epoch 54/150         Time: 1.266     Loss: 6.75475941
+INFO:root:  Epoch 55/150         Time: 1.318     Loss: 6.74403427
+INFO:root:  Epoch 56/150         Time: 1.339     Loss: 6.73632916
+INFO:root:  Epoch 57/150         Time: 1.277     Loss: 6.72873060
+INFO:root:  Epoch 58/150         Time: 1.243     Loss: 6.71916350
+INFO:root:  Epoch 59/150         Time: 1.289     Loss: 6.70787279
+INFO:root:  Epoch 60/150         Time: 1.296     Loss: 6.70015117
+INFO:root:  Epoch 61/150         Time: 1.284     Loss: 6.69728614
+INFO:root:  Epoch 62/150         Time: 1.251     Loss: 6.68621734
+INFO:root:  Epoch 63/150         Time: 1.269     Loss: 6.67341768
+INFO:root:  Epoch 64/150         Time: 1.334     Loss: 6.66283112
+INFO:root:  Epoch 65/150         Time: 1.328     Loss: 6.66118075
+INFO:root:  Epoch 66/150         Time: 1.303     Loss: 6.64701872
+INFO:root:  Epoch 67/150         Time: 1.285     Loss: 6.63637147
+INFO:root:  Epoch 68/150         Time: 1.235     Loss: 6.62993862
+INFO:root:  Epoch 69/150         Time: 1.261     Loss: 6.61987697
+INFO:root:  Epoch 70/150         Time: 1.318     Loss: 6.60520132
+INFO:root:  Epoch 71/150         Time: 1.309     Loss: 6.59993361
+INFO:root:  Epoch 72/150         Time: 1.267     Loss: 6.58742429
+INFO:root:  Epoch 73/150         Time: 1.236     Loss: 6.58300955
+INFO:root:  Epoch 74/150         Time: 1.319     Loss: 6.56439985
+INFO:root:  Epoch 75/150         Time: 1.293     Loss: 6.56100051
+INFO:root:  Epoch 76/150         Time: 1.247     Loss: 6.55852621
+INFO:root:  Epoch 77/150         Time: 1.296     Loss: 6.54591967
+INFO:root:  Epoch 78/150         Time: 1.291     Loss: 6.53195756
+INFO:root:  Epoch 79/150         Time: 1.345     Loss: 6.52404674
+INFO:root:  Epoch 80/150         Time: 1.237     Loss: 6.51278532
+INFO:root:  Epoch 81/150         Time: 1.265     Loss: 6.50020267
+INFO:root:  Epoch 82/150         Time: 1.280     Loss: 6.49399797
+INFO:root:  Epoch 83/150         Time: 1.327     Loss: 6.47640791
+INFO:root:  Epoch 84/150         Time: 1.297     Loss: 6.46688104
+INFO:root:  Epoch 85/150         Time: 1.231     Loss: 6.45969001
+INFO:root:  Epoch 86/150         Time: 1.323     Loss: 6.44611476
+INFO:root:  Epoch 87/150         Time: 1.327     Loss: 6.43882138
+INFO:root:  Epoch 88/150         Time: 1.251     Loss: 6.42584588
+INFO:root:  Epoch 89/150         Time: 1.234     Loss: 6.40790782
+INFO:root:  Epoch 90/150         Time: 1.252     Loss: 6.40617266
+INFO:root:  Epoch 91/150         Time: 1.331     Loss: 6.39889123
+INFO:root:  Epoch 92/150         Time: 1.315     Loss: 6.39292121
+INFO:root:  Epoch 93/150         Time: 1.299     Loss: 6.37326388
+INFO:root:  Epoch 94/150         Time: 1.233     Loss: 6.35837228
+INFO:root:  Epoch 95/150         Time: 1.279     Loss: 6.35103842
+INFO:root:  Epoch 96/150         Time: 1.332     Loss: 6.33845352
+INFO:root:  Epoch 97/150         Time: 1.299     Loss: 6.32521941
+INFO:root:  Epoch 98/150         Time: 1.270     Loss: 6.31306693
+INFO:root:  Epoch 99/150         Time: 1.243     Loss: 6.30186078
+INFO:root:  Epoch 100/150        Time: 1.275     Loss: 6.29237204
+INFO:root:  Epoch 101/150        Time: 1.296     Loss: 6.27769249
+INFO:root:  Epoch 102/150        Time: 1.297     Loss: 6.26938955
+INFO:root:  Epoch 103/150        Time: 1.292     Loss: 6.26037407
+INFO:root:  Epoch 104/150        Time: 1.231     Loss: 6.24960586
+INFO:root:  Epoch 105/150        Time: 1.260     Loss: 6.23830805
+INFO:root:  Epoch 106/150        Time: 1.324     Loss: 6.21730529
+INFO:root:  Epoch 107/150        Time: 1.284     Loss: 6.21014283
+INFO:root:  Epoch 108/150        Time: 1.297     Loss: 6.19694918
+INFO:root:  Epoch 109/150        Time: 1.232     Loss: 6.18435880
+INFO:root:  Epoch 110/150        Time: 1.241     Loss: 6.17829444
+INFO:root:  Epoch 111/150        Time: 1.348     Loss: 6.16339453
+INFO:root:  Epoch 112/150        Time: 1.305     Loss: 6.15208626
+INFO:root:  Epoch 113/150        Time: 1.291     Loss: 6.14006707
+INFO:root:  Epoch 114/150        Time: 1.251     Loss: 6.12815809
+INFO:root:  Epoch 115/150        Time: 1.257     Loss: 6.11450335
+INFO:root:  Epoch 116/150        Time: 1.300     Loss: 6.10132524
+INFO:root:  Epoch 117/150        Time: 1.324     Loss: 6.08999661
+INFO:root:  Epoch 118/150        Time: 1.272     Loss: 6.07473286
+INFO:root:  Epoch 119/150        Time: 1.266     Loss: 6.06780779
+INFO:root:  Epoch 120/150        Time: 1.237     Loss: 6.05071456
+INFO:root:  Epoch 121/150        Time: 1.259     Loss: 6.04178495
+INFO:root:  Epoch 122/150        Time: 1.337     Loss: 6.02690449
+INFO:root:  Epoch 123/150        Time: 1.290     Loss: 6.02024147
+INFO:root:  Epoch 124/150        Time: 1.292     Loss: 6.00267442
+INFO:root:  Epoch 125/150        Time: 1.236     Loss: 5.99208654
+INFO:root:  Epoch 126/150        Time: 1.258     Loss: 5.97800585
+INFO:root:  Epoch 127/150        Time: 1.346     Loss: 5.96412328
+INFO:root:  Epoch 128/150        Time: 1.328     Loss: 5.94846036
+INFO:root:  Epoch 129/150        Time: 1.290     Loss: 5.94303560
+INFO:root:  Epoch 130/150        Time: 1.269     Loss: 5.92157049
+INFO:root:  Epoch 131/150        Time: 1.237     Loss: 5.91437378
+INFO:root:  Epoch 132/150        Time: 1.246     Loss: 5.89752552
+INFO:root:  Epoch 133/150        Time: 1.331     Loss: 5.88543932
+INFO:root:  Epoch 134/150        Time: 1.312     Loss: 5.87124403
+INFO:root:  Epoch 135/150        Time: 1.299     Loss: 5.85993228
+INFO:root:  Epoch 136/150        Time: 1.261     Loss: 5.84732191
+INFO:root:  Epoch 137/150        Time: 1.237     Loss: 5.83192644
+INFO:root:  Epoch 138/150        Time: 1.239     Loss: 5.81962241
+INFO:root:  Epoch 139/150        Time: 1.272     Loss: 5.81134450
+INFO:root:  Epoch 140/150        Time: 1.324     Loss: 5.79490121
+INFO:root:  Epoch 141/150        Time: 1.273     Loss: 5.78242165
+INFO:root:  Epoch 142/150        Time: 1.288     Loss: 5.76853978
+INFO:root:  Epoch 143/150        Time: 1.268     Loss: 5.76086837
+INFO:root:  Epoch 144/150        Time: 1.244     Loss: 5.74559412
+INFO:root:  Epoch 145/150        Time: 1.277     Loss: 5.72985636
+INFO:root:  Epoch 146/150        Time: 1.321     Loss: 5.72504250
+INFO:root:  Epoch 147/150        Time: 1.291     Loss: 5.70821729
+INFO:root:  Epoch 148/150        Time: 1.238     Loss: 5.69215771
+INFO:root:  Epoch 149/150        Time: 1.278     Loss: 5.68106174
+INFO:root:  Epoch 150/150        Time: 1.326     Loss: 5.66058116
+INFO:root:Pretraining time: 193.370
+INFO:root:Finished pretraining.
+INFO:root:Testing autoencoder...
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torchvision/datasets/mnist.py:80: UserWarning: test_data has been renamed data
+  warnings.warn("test_data has been renamed data")
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torchvision/datasets/mnist.py:70: UserWarning: test_labels has been renamed targets
+  warnings.warn("test_labels has been renamed targets")
+INFO:root:Test set Loss: 10.10092487
+INFO:root:Test set AUC: 90.73%
+INFO:root:Autoencoder testing time: 1.958
+INFO:root:Finished testing autoencoder.
+INFO:root:Training optimizer: adam
+INFO:root:Training learning rate: 0.0001
+INFO:root:Training epochs: 150
+INFO:root:Training learning rate scheduler milestones: (50,)
+INFO:root:Training batch size: 200
+INFO:root:Training weight decay: 5e-07
+INFO:root:Initializing center c...
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torchvision/datasets/mnist.py:75: UserWarning: train_data has been renamed data
+  warnings.warn("train_data has been renamed data")
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torchvision/datasets/mnist.py:65: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+INFO:root:Center c initialized.
+INFO:root:Starting training...
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:227: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+INFO:root:  Epoch 1/150  Time: 1.260     Loss: 1.67963154
+INFO:root:  Epoch 2/150  Time: 1.249     Loss: 0.98668522
+INFO:root:  Epoch 3/150  Time: 1.249     Loss: 0.64529449
+INFO:root:  Epoch 4/150  Time: 1.266     Loss: 0.45747373
+INFO:root:  Epoch 5/150  Time: 1.235     Loss: 0.34423296
+INFO:root:  Epoch 6/150  Time: 1.247     Loss: 0.27137758
+INFO:root:  Epoch 7/150  Time: 1.248     Loss: 0.22277192
+INFO:root:  Epoch 8/150  Time: 1.243     Loss: 0.18979852
+INFO:root:  Epoch 9/150  Time: 1.237     Loss: 0.16567898
+INFO:root:  Epoch 10/150         Time: 1.241     Loss: 0.14765236
+INFO:root:  Epoch 11/150         Time: 1.222     Loss: 0.13337422
+INFO:root:  Epoch 12/150         Time: 1.223     Loss: 0.12142043
+INFO:root:  Epoch 13/150         Time: 1.228     Loss: 0.11140011
+INFO:root:  Epoch 14/150         Time: 1.293     Loss: 0.10465309
+INFO:root:  Epoch 15/150         Time: 1.253     Loss: 0.09729073
+INFO:root:  Epoch 16/150         Time: 1.245     Loss: 0.08914730
+INFO:root:  Epoch 17/150         Time: 1.268     Loss: 0.08503344
+INFO:root:  Epoch 18/150         Time: 1.232     Loss: 0.07914485
+INFO:root:  Epoch 19/150         Time: 1.222     Loss: 0.07599859
+INFO:root:  Epoch 20/150         Time: 1.221     Loss: 0.07132222
+INFO:root:  Epoch 21/150         Time: 1.236     Loss: 0.06875762
+INFO:root:  Epoch 22/150         Time: 1.255     Loss: 0.06445535
+INFO:root:  Epoch 23/150         Time: 1.235     Loss: 0.06059930
+INFO:root:  Epoch 24/150         Time: 1.229     Loss: 0.05896301
+INFO:root:  Epoch 25/150         Time: 1.242     Loss: 0.05581434
+INFO:root:  Epoch 26/150         Time: 1.271     Loss: 0.05311453
+INFO:root:  Epoch 27/150         Time: 1.240     Loss: 0.05210260
+INFO:root:  Epoch 28/150         Time: 1.220     Loss: 0.04980566
+INFO:root:  Epoch 29/150         Time: 1.231     Loss: 0.04756060
+INFO:root:  Epoch 30/150         Time: 1.250     Loss: 0.04673286
+INFO:root:  Epoch 31/150         Time: 1.270     Loss: 0.04515613
+INFO:root:  Epoch 32/150         Time: 1.226     Loss: 0.04354637
+INFO:root:  Epoch 33/150         Time: 1.231     Loss: 0.04150580
+INFO:root:  Epoch 34/150         Time: 1.246     Loss: 0.04105483
+INFO:root:  Epoch 35/150         Time: 1.257     Loss: 0.03918557
+INFO:root:  Epoch 36/150         Time: 1.225     Loss: 0.03731186
+INFO:root:  Epoch 37/150         Time: 1.220     Loss: 0.03652783
+INFO:root:  Epoch 38/150         Time: 1.231     Loss: 0.03561964
+INFO:root:  Epoch 39/150         Time: 1.273     Loss: 0.03450308
+INFO:root:  Epoch 40/150         Time: 1.226     Loss: 0.03370623
+INFO:root:  Epoch 41/150         Time: 1.281     Loss: 0.03188292
+INFO:root:  Epoch 42/150         Time: 1.257     Loss: 0.03356973
+INFO:root:  Epoch 43/150         Time: 1.241     Loss: 0.03131481
+INFO:root:  Epoch 44/150         Time: 1.235     Loss: 0.03034610
+INFO:root:  Epoch 45/150         Time: 1.235     Loss: 0.02881094
+INFO:root:  Epoch 46/150         Time: 1.229     Loss: 0.02948931
+INFO:root:  Epoch 47/150         Time: 1.267     Loss: 0.02835669
+INFO:root:  Epoch 48/150         Time: 1.270     Loss: 0.02656675
+INFO:root:  Epoch 49/150         Time: 1.247     Loss: 0.02747670
+INFO:root:  Epoch 50/150         Time: 1.225     Loss: 0.02599540
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:597: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  _warn_get_lr_called_within_step(self)
+INFO:root:  LR scheduler: new learning rate is 1e-05
+INFO:root:  Epoch 51/150         Time: 1.284     Loss: 0.02540469
+INFO:root:  Epoch 52/150         Time: 1.231     Loss: 0.02632855
+INFO:root:  Epoch 53/150         Time: 1.229     Loss: 0.02555777
+INFO:root:  Epoch 54/150         Time: 1.289     Loss: 0.02568283
+INFO:root:  Epoch 55/150         Time: 1.243     Loss: 0.02592426
+INFO:root:  Epoch 56/150         Time: 1.234     Loss: 0.02591373
+INFO:root:  Epoch 57/150         Time: 1.229     Loss: 0.02601745
+INFO:root:  Epoch 58/150         Time: 1.222     Loss: 0.02508389
+INFO:root:  Epoch 59/150         Time: 1.220     Loss: 0.02592694
+INFO:root:  Epoch 60/150         Time: 1.228     Loss: 0.02589731
+INFO:root:  Epoch 61/150         Time: 1.252     Loss: 0.02504568
+INFO:root:  Epoch 62/150         Time: 1.232     Loss: 0.02515265
+INFO:root:  Epoch 63/150         Time: 1.264     Loss: 0.02503059
+INFO:root:  Epoch 64/150         Time: 1.231     Loss: 0.02537209
+INFO:root:  Epoch 65/150         Time: 1.231     Loss: 0.02435194
+INFO:root:  Epoch 66/150         Time: 1.264     Loss: 0.02477317
+INFO:root:  Epoch 67/150         Time: 1.249     Loss: 0.02498523
+INFO:root:  Epoch 68/150         Time: 1.240     Loss: 0.02521826
+INFO:root:  Epoch 69/150         Time: 1.217     Loss: 0.02483133
+INFO:root:  Epoch 70/150         Time: 1.224     Loss: 0.02484249
+INFO:root:  Epoch 71/150         Time: 1.228     Loss: 0.02453276
+INFO:root:  Epoch 72/150         Time: 1.269     Loss: 0.02452622
+INFO:root:  Epoch 73/150         Time: 1.257     Loss: 0.02400908
+INFO:root:  Epoch 74/150         Time: 1.255     Loss: 0.02427860
+INFO:root:  Epoch 75/150         Time: 1.244     Loss: 0.02503114
+INFO:root:  Epoch 76/150         Time: 1.245     Loss: 0.02430684
+INFO:root:  Epoch 77/150         Time: 1.234     Loss: 0.02535511
+INFO:root:  Epoch 78/150         Time: 1.233     Loss: 0.02398530
+INFO:root:  Epoch 79/150         Time: 1.230     Loss: 0.02409958
+INFO:root:  Epoch 80/150         Time: 1.252     Loss: 0.02408952
+INFO:root:  Epoch 81/150         Time: 1.231     Loss: 0.02433669
+INFO:root:  Epoch 82/150         Time: 1.267     Loss: 0.02443594
+INFO:root:  Epoch 83/150         Time: 1.224     Loss: 0.02403763
+INFO:root:  Epoch 84/150         Time: 1.222     Loss: 0.02379798
+INFO:root:  Epoch 85/150         Time: 1.227     Loss: 0.02391982
+INFO:root:  Epoch 86/150         Time: 1.235     Loss: 0.02341176
+INFO:root:  Epoch 87/150         Time: 1.210     Loss: 0.02338955
+INFO:root:  Epoch 88/150         Time: 1.301     Loss: 0.02397030
+INFO:root:  Epoch 89/150         Time: 1.226     Loss: 0.02323621
+INFO:root:  Epoch 90/150         Time: 1.236     Loss: 0.02346448
+INFO:root:  Epoch 91/150         Time: 1.222     Loss: 0.02364197
+INFO:root:  Epoch 92/150         Time: 1.231     Loss: 0.02315526
+INFO:root:  Epoch 93/150         Time: 1.208     Loss: 0.02303112
+INFO:root:  Epoch 94/150         Time: 1.235     Loss: 0.02296756
+INFO:root:  Epoch 95/150         Time: 1.221     Loss: 0.02297895
+INFO:root:  Epoch 96/150         Time: 1.253     Loss: 0.02257914
+INFO:root:  Epoch 97/150         Time: 1.226     Loss: 0.02272496
+INFO:root:  Epoch 98/150         Time: 1.232     Loss: 0.02269800
+INFO:root:  Epoch 99/150         Time: 1.229     Loss: 0.02211547
+INFO:root:  Epoch 100/150        Time: 1.229     Loss: 0.02279638
+INFO:root:  Epoch 101/150        Time: 1.227     Loss: 0.02236212
+INFO:root:  Epoch 102/150        Time: 1.219     Loss: 0.02218214
+INFO:root:  Epoch 103/150        Time: 1.227     Loss: 0.02239232
+INFO:root:  Epoch 104/150        Time: 1.261     Loss: 0.02288073
+INFO:root:  Epoch 105/150        Time: 1.223     Loss: 0.02245934
+INFO:root:  Epoch 106/150        Time: 1.232     Loss: 0.02267985
+INFO:root:  Epoch 107/150        Time: 1.241     Loss: 0.02180663
+INFO:root:  Epoch 108/150        Time: 1.257     Loss: 0.02225727
+INFO:root:  Epoch 109/150        Time: 1.242     Loss: 0.02191332
+INFO:root:  Epoch 110/150        Time: 1.248     Loss: 0.02111193
+INFO:root:  Epoch 111/150        Time: 1.228     Loss: 0.02170909
+INFO:root:  Epoch 112/150        Time: 1.220     Loss: 0.02136625
+INFO:root:  Epoch 113/150        Time: 1.223     Loss: 0.02165846
+INFO:root:  Epoch 114/150        Time: 1.238     Loss: 0.02159174
+INFO:root:  Epoch 115/150        Time: 1.261     Loss: 0.02176741
+INFO:root:  Epoch 116/150        Time: 1.228     Loss: 0.02180016
+INFO:root:  Epoch 117/150        Time: 1.222     Loss: 0.02183857
+INFO:root:  Epoch 118/150        Time: 1.237     Loss: 0.02160370
+INFO:root:  Epoch 119/150        Time: 1.226     Loss: 0.02144855
+INFO:root:  Epoch 120/150        Time: 1.237     Loss: 0.02076168
+INFO:root:  Epoch 121/150        Time: 1.225     Loss: 0.02151546
+INFO:root:  Epoch 122/150        Time: 1.234     Loss: 0.02133939
+INFO:root:  Epoch 123/150        Time: 1.247     Loss: 0.02073123
+INFO:root:  Epoch 124/150        Time: 1.231     Loss: 0.02066311
+INFO:root:  Epoch 125/150        Time: 1.228     Loss: 0.02076715
+INFO:root:  Epoch 126/150        Time: 1.252     Loss: 0.02061307
+INFO:root:  Epoch 127/150        Time: 1.252     Loss: 0.02085417
+INFO:root:  Epoch 128/150        Time: 1.235     Loss: 0.02068811
+INFO:root:  Epoch 129/150        Time: 1.225     Loss: 0.02042444
+INFO:root:  Epoch 130/150        Time: 1.226     Loss: 0.02036341
+INFO:root:  Epoch 131/150        Time: 1.230     Loss: 0.02042961
+INFO:root:  Epoch 132/150        Time: 1.210     Loss: 0.02042831
+INFO:root:  Epoch 133/150        Time: 1.246     Loss: 0.02061521
+INFO:root:  Epoch 134/150        Time: 1.219     Loss: 0.01980701
+INFO:root:  Epoch 135/150        Time: 1.222     Loss: 0.02072768
+INFO:root:  Epoch 136/150        Time: 1.209     Loss: 0.02052616
+INFO:root:  Epoch 137/150        Time: 1.230     Loss: 0.01970367
+INFO:root:  Epoch 138/150        Time: 1.230     Loss: 0.02007586
+INFO:root:  Epoch 139/150        Time: 1.271     Loss: 0.01975802
+INFO:root:  Epoch 140/150        Time: 1.250     Loss: 0.01952326
+INFO:root:  Epoch 141/150        Time: 1.225     Loss: 0.01940378
+INFO:root:  Epoch 142/150        Time: 1.233     Loss: 0.02008967
+INFO:root:  Epoch 143/150        Time: 1.244     Loss: 0.01954638
+INFO:root:  Epoch 144/150        Time: 1.243     Loss: 0.01947678
+INFO:root:  Epoch 145/150        Time: 1.263     Loss: 0.01917543
+INFO:root:  Epoch 146/150        Time: 1.220     Loss: 0.01967118
+INFO:root:  Epoch 147/150        Time: 1.229     Loss: 0.01916584
+INFO:root:  Epoch 148/150        Time: 1.214     Loss: 0.01945539
+INFO:root:  Epoch 149/150        Time: 1.263     Loss: 0.01919256
+INFO:root:  Epoch 150/150        Time: 1.218     Loss: 0.02018901
+INFO:root:Training time: 185.860
+INFO:root:Finished training.
+INFO:root:Starting testing...
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torchvision/datasets/mnist.py:80: UserWarning: test_data has been renamed data
+  warnings.warn("test_data has been renamed data")
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torchvision/datasets/mnist.py:70: UserWarning: test_labels has been renamed targets
+  warnings.warn("test_labels has been renamed targets")
+INFO:root:Testing time: 1.863
+INFO:root:Test set AUC: 97.86%
+INFO:root:Finished testing.
+/home/jameskong/miniconda3/lib/python3.9/site-packages/torchvision/datasets/mnist.py:80: UserWarning: test_data has been renamed data
+  warnings.warn("test_data has been renamed data")
